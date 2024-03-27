@@ -5,6 +5,7 @@ from .models import Post
 class PostAdmin(admin.ModelAdmin):
     fieldsets = [
         ('Title/Date', {'fields': ['title', 'date_posted']}),
+        ('Image', {'fields': ['image']}),
         ('Content', {'fields': ['content']}),
         ('Author', {'fields': ['author']}),
     ]
