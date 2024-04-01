@@ -1,22 +1,29 @@
-
 {% extends 'blog/base.html' %}
 {% block content %}
     {% for post in posts %}
-        <div class="card" style="width: 18rem;">
-            <img src="{{ post.image.url }}" class="" alt="...">
-            <div class="card-body">
-            <h5 class="card-title">{{ post.title }}</h5>
-            <p class="card-text">{{ post.content }}</p>
+        <div class="card mb-3 blog_list" style="max-width: 1040px;">
+            <div class="row g-0">
+                <div class="col-lg-4">
+                    <img src="{{ post.image.url }}" class="img-fluid rounded-top-left-1" alt="...">
+                </div>
+            <div class="col-lg-8">
+                <div class="card-body">
+                <h2 class="card-title">{{ post.title }}</h2>
+                <p class="card-text">{{ post.content }}</p>
+                <p class="card-text">
+                    <small class="text-body-secondary">{{ post.author }} | {{ post.date_posted }}</small>
+                </p>
+                <p class="card-text">
+                    <small class="text-body-secondary">TYPE</small>
+                </p>
+                </div>
             </div>
-            <ul class="list-group list-group-flush">
-            <li class="list-group-item">{{ post.author }}</li>
-            <li class="list-group-item">{{ post.date_posted }}</li>
-
-            </ul>
-            <!-- <div class="card-body">
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-            </div> -->
+            </div>
         </div>
     {% endfor %}
 {% endblock content %}
+
+
+
+
+
