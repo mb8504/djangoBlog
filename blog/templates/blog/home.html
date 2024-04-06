@@ -1,7 +1,7 @@
 {% extends 'blog/base.html' %}
 {% block content %}
     {% for post in posts %}
-        <div class="card mb-3 blog_list" style="max-width: 1040px;">
+        <div class="card mb-3 main-content" style="max-width: 1040px;">
             <div class="row g-0">
                 <div class="col-lg-4">
                     <img src="{{ post.image.url }}" class="img-fluid rounded-top-left-1" alt="...">
