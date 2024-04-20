@@ -1,0 +1,33 @@
+
+{% extends 'blog/base.html' %}
+{% block content %}
+    <h1>{{ category_name }}</h1>
+    <ul>
+        {% for post in category_posts %}
+
+            <div class="card mb-3 main-content" style="max-width: 1040px;">
+                <div class="row g-0">
+                    <div class="col-lg-4">
+                        <img src="{{ post.image.url }}" class="img-fluid rounded-top-left-1" alt="...">
+                    </div>
+                <div class="col-lg-8">
+                    <div class="card-body">
+                    <h2 class="card-title"><a href="{% url 'post-detail' post.pk %}">{{ post.title }}</a></h2>
+                    <p class="card-text">{{ post.content }}</p>
+                    <p class="card-text">
+                        <small class="text-body-secondary">{{ post.author }} | {{ post.date_posted }}</small>
+                    </p>
+                    <p class="card-text">
+                        <small class="text-body-secondary"><a href="{% url 'category' post.category|slugify %}">{{ post.category }}</a></small>
+                    </p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        {% endfor %}
+    </ul>
+{% endblock content %}
+
+
+
+

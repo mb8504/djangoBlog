@@ -8,13 +8,13 @@
                 </div>
             <div class="col-lg-8">
                 <div class="card-body">
-                <h2 class="card-title">{{ post.title }}</h2>
+                <h2 class="card-title"><a href="{% url 'post-detail' post.pk %}">{{ post.title }}</a></h2>
                 <p class="card-text">{{ post.content }}</p>
                 <p class="card-text">
                     <small class="text-body-secondary">{{ post.author }} | {{ post.date_posted }}</small>
                 </p>
                 <p class="card-text">
-                    <small class="text-body-secondary">{{ post.category }}</small>
+                    <small class="text-body-secondary"><a href="{% url 'category' post.category|slugify %}">{{ post.category }}</a></small>
                 </p>
                 </div>
             </div>

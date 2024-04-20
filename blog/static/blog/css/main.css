@@ -1,7 +1,7 @@
 
 
 h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 h2 {
     font-size: 1.25rem;
@@ -40,5 +40,12 @@ h2 {
 .form-group {
     margin-bottom: 1rem;
 }
-
 /* END REGISTER PAGE */
+
+
+/* POST DETAILS – ALL BLOGS */
+.post-title h1 {
+    font-size: 8.2rem;
+}
+
+/* END POST DETAILS – ALL BLOGS */

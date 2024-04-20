@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+
+<img src="{{ post.image.url }}" class="img-fluid" alt="...">
+
+<h1>{{ post.title }}</h1>
+<small class="text-body-secondary">{{ post.author }} | {{ post.date_posted }}</small>
+<p class="fs-4">{{ post.content }}</p>
+{% endblock content %}
+   
+   
+   
+   
+
