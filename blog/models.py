@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
+from django.utils.text import slugify
 
 class PostCategory(models.Model):
     category = models.CharField(max_length=200)
@@ -14,18 +15,6 @@ class PostCategory(models.Model):
         return self.category
 
 
-# class PostSeries(models.Model):
-#     series = models.CharField(max_length=200)
-#     category = models.ForeignKey(PostCategory, default=1, verbose_name="Category", on_delete=models.SET_DEFAULT)
-#     summary = models.CharField(max_length=200)
-
-#     class Meta:
-#         verbose_name_plural = 'Series'
-
-#     def __str__(self):
-#         return self.series
-    
-
 # Create your models here.
 class Post(models.Model):
     title = models.CharField(max_length=100)
@@ -35,6 +24,10 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     category = models.ForeignKey(PostCategory, default=1, on_delete=models.SET_DEFAULT)
     path = models.CharField(max_length=200, default=1)
+
+    def save(self, *args, **kwargs):
+        self.path = slugify(self.title)
+        super().save(*args, **kwargs)
 
     def __str__(self):
         return self.title
