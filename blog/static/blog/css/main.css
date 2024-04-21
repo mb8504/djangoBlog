@@ -14,6 +14,18 @@ h2 {
     background: none;
 }
 
+/* Add custom styling for the logout button */
+.navbar-btn {
+    color: rgb(255, 255, 255, 0.55); /* Text color */
+    text-decoration: none; /* Remove underline */
+    margin-left: 10px; /* Add margin for spacing */
+}
+
+.navbar-btn:hover {
+    color: rgb(255, 255, 255, 0.75); /* Change text color on hover */
+    text-decoration: none; /* Remove underline on hover */
+}
+
 
 /* END NAVBAR */
 
