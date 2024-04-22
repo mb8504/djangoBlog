@@ -18,7 +18,8 @@ h2 {
 .navbar-btn {
     color: rgb(255, 255, 255, 0.55); /* Text color */
     text-decoration: none; /* Remove underline */
-    margin-left: 10px; /* Add margin for spacing */
+    padding: 0.5rem;
+    margin: 0;
 }
 
 .navbar-btn:hover {
@@ -37,6 +38,45 @@ h2 {
 .rounded-top-left-1 {
     border-top-left-radius: 0.3rem;
 }
+
+.blog-title-link {
+    text-decoration: none;
+    color: #212529;
+    font-weight: bold;
+}
+.blog-title-link:hover {
+    text-decoration: underline;
+    color: #0d6efd;
+}
+
+.blog-category-link {
+    text-decoration: none;
+    color: #212529;
+}
+
+.small-text {
+    font-size: 75%; /* Adjust the font size as needed */
+}
+.small-text:hover {
+    text-decoration: underline;
+}
+
+.custom-btn-outline-info {
+    color: rgb(33, 37, 41); /* Set text color */
+    border-color: rgb(33, 37, 41); /* Set border color */
+}
+
+.custom-btn-outline-info:hover {
+    color: #fff; /* Set text color on hover */
+    background-color: rgb(33, 37, 41); /* Set background color on hover */
+    border-color: rgb(33, 37, 41); /* Set border color on hover */
+}
+
+.custom-btn-info {
+    color: #fff;
+    background-color: rgb(33, 37, 41);
+}
+
 /* END MAIN BLOG SECTION */
 
 

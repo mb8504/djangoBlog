@@ -16,7 +16,7 @@ class PostListView(ListView):
     template_name = 'blog/home.html'
     context_object_name = 'posts'
     ordering = ['-date_posted']
-    paginate_by = 2
+    paginate_by = 4
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -39,6 +39,9 @@ class PostDetailView(DetailView):
 
 def about(request):
     return render(request, 'blog/about.html', {'title': 'About'})
+
+def contact(request):
+    return render(request, 'blog/contact.html', {'title': 'Contact'})
 
 def CategoryView(request, category_name):
     try:
