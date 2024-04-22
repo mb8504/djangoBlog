@@ -44,6 +44,9 @@ def contact(request):
     return render(request, 'blog/contact.html', {'title': 'Contact'})
 
 def CategoryView(request, category_name):
+    # Replace hyphens or underscores with spaces
+    category_name = category_name.replace('-', ' ').replace('_', ' ')
+    
     try:
         category = PostCategory.objects.get(category=category_name.upper())
         category_posts = Post.objects.filter(category=category)
