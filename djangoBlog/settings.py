@@ -50,7 +50,7 @@ INSTALLED_APPS = [
     'users',
     'crispy_forms',
     'crispy_bootstrap4',
-    'storages',
+    # 'storages',
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
