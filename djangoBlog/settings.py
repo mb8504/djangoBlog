@@ -18,7 +18,7 @@ from dotenv import load_dotenv
 load_dotenv() 
 
 import django_heroku
-from storages.backends.s3boto3 import S3Boto3Storage
+
 
 
 
