@@ -33,9 +33,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY') 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = (os.environ.get('DEBUG_VALUE') == 'True')
 
-ALLOWED_HOSTS = ['coffeeandcode-e6a261bcca5c.herokuapp.com']
+ALLOWED_HOSTS = ['coffeeandcode.herokuapp.com']
 
 
 # Application definition
